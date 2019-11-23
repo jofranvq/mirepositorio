@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcular Sueldo</title>
+<script>
+
+    /*
+    El cálculo del pago mensual de un empleado de una empresa se efectúa de la
+siguiente manera: 
+el sueldo básico se calcula en base al número total de horas trabajadas basado en una tarifa horaria; 
+al sueldo básico, se le aplica una bonificación del 20% obteniéndose el sueldo bruto; 
+al sueldo bruto, se le aplica un descuento del 10% obteniéndose el sueldo neto. 
+escriba un programa que calcule e imprima el sueldo básico, el sueldo bruto y el sueldo neto de un trabajador.
+*/
+
+    //Declarar las variables
+    let tarifah = 10;
+    let num_horas = 100;
+    let sueldo_basico;
+    let sueldo_bruto;
+    let sueldo_neto;
+
+    //Ingreso de datos
+    tarifah = prompt("ingresa la tarifa por hora");
+    num_horas = prompt("ingresa el número de horas");
+    
+    //Procesamiento
+    tarifah = parseInt(tarifah);
+    num_horas = parseInt(num_horas);
+    sueldo_basico = tarifah*num_horas;
+    sueldo_bruto = sueldo_basico*1.2;
+    sueldo_neto = sueldo_bruto*0.9;
+
+    // Salida de Datos
+    document.write("Para un empleado que gana " + tarifah + " soles por hora, con un total de " + num_horas + " horas trabajadas al mes, tenemos:");
+    document.write("<br>");
+    document.write("el sueldo básico es: " + sueldo_basico);
+    document.write("<br>");
+    document.write("el sueldo bruto es: " + sueldo_bruto);
+    document.write("<br>");
+    document.write("el sueldo neto es: " + sueldo_neto);
+
+    </script>
+
+</head>
+
+
+
+
+<body>
+
+</body>
+</html>
