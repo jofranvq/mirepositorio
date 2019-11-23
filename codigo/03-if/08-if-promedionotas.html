@@ -4,37 +4,56 @@
     <meta charset="UTF-8">
     <title>Promedio Notas</title>
 
-    /*
-El promedio final de un curso se obtiene en base al promedio simple de tres prácticas
-calificadas. Para ayudar a los alumnos, el profesor del curso ha prometido incrementar
-en dos puntos la nota de la tercera práctica calificada, si es que esta es no menor que
-10. Diseñe un programa que determine el promedio final de un alumno conociendo sus
-tres notas. Considere que la nota máxima es 20.
-Imprima el promedio.
-    */
+    <script>
 
-<script>
+        /*
+        El promedio final de un curso se obtiene en base al promedio simple de tres prácticas
+        calificadas. Para ayudar a los alumnos, el profesor del curso ha prometido incrementar
+        en dos puntos la nota de la tercera práctica calificada, si es que esta es no menor que
+        10. Diseñe un programa que determine el promedio final de un alumno conociendo sus
+        tres notas. Considere que la nota máxima es 20.
+        Imprima el promedio.
+        */
 
-    //declarar las variables
+        //declarar varibles
+        let promedio_final;
+        let promedio_simple;
+        let practica1;
+        let practica2;
+        let practica3;
+
+        //ingreso datos
+        practica1 = prompt("Ingrese la nota de la primera practica:");
+        practica2 = prompt("Ingrese la nota de la segunda practica:");
+        practica3 = prompt("Ingrese la nota de la tercera practica:");
+
+        //procesamiento de datos
+        practica1 = parseFloat(practica1);
+        practica2 = parseFloat(practica2);
+        practica3 = parseFloat(practica3);
+
+        if (practica1>20 || practica2>20 || practica3>20){
+            document.write("las notas ingresadas no son validas. Por favor refresque la pagina y vuelva a intentarlo.");
+        } else if (){
+
+        }
+
+        if (numero%2==0) {
+            document.write("el numero " + numero + " es par.");
+        } else {
+            document.write("el numero " + numero + " es impar.");
+        }
+
+        //formular del promedio = sumaelementos/cantidadElementos
 
 
+        //impresion de datos
+        document.write("La practica 1 es " + practica1 + ".");
+        document.write("La practica 2 es " + practica2 + ".");
+        document.write("La practica 3 es " + practica3 + ".");
+        document.write("El promedio final es " + promedio_final + ".");
 
-
-    //ingreso de datos
-
-
-    //procesamiento de datos
-
-
-
-       //formular del promedio = sumaelementos/cantidadElementos
-
-
-    //impresion de datos
-
-
-
-</script>
+    </script>
 
 </head>
 <body>

@@ -6,24 +6,38 @@
 </head>
 <script>
 
-/*
+    /*
 
-Un hospital ha recibido una donación especial que será repartida entre las áreas
-de Pediatría, Medicina General, Ginecología y Traumatología de la siguiente
-forma:
-· Pediatría: 20% del monto total recibido entre Medicina General y Ginecología
-· Medicina General : 45% de la donación
-· Ginecología : 30% de la donación
-· Traumatología: lo que resta la donación.
+    Un hospital ha recibido una donación especial que será repartida entre las áreas de Pediatría, Medicina General, Ginecología y Traumatología de la siguiente forma:
+    · Pediatría: 20% del monto total recibido entre Medicina General y Ginecología
+    · Medicina General : 45% de la donación
+    · Ginecología : 30% de la donación
+    · Traumatología: lo que resta la donación.
+    */
 
+    //declarar varibles
+    let donacion;
+    let pediatria;
+    let medicina;
+    let ginecologia;
+    let traumatologia;
 
-*/
+    //ingreso datos
+    donacion = prompt("Ingrese la donación");
 
+    //procesamiento
+    donacion = parseFloat(donacion);
+    medicina = donacion*0.45;
+    ginecologia = donacion*0.3;
+    pediatria = (medicina+ginecologia)*0.2;
+    traumatologia = donacion-medicina-ginecologia-pediatria;
 
-
-
-
-
+    //salida datos
+    document.write("Con una donación de " + donacion + " tenemos: <br/>");
+    document.write("*Medicina General: " + medicina + "<br/>");
+    document.write("*Ginecologia: " + ginecologia + "<br/>");
+    document.write("*Pediatria: " + pediatria + "<br/>");
+    document.write("*Traumatologia: " + traumatologia + "<br/>");
 </script>
 
 <body>

@@ -4,36 +4,46 @@
     <meta charset="UTF-8">
     <title>Convertir Metros</title>
 
-<script>
+    <script>
 
-    /*
-    Diseñe un programa que permita convertir una cantidad dada en metros a sus
-equivalentes en centímetros, pulgadas, pies y yardas. Considere la siguiente
-información:
-
-1 metro = 100 centímetros
-1 pie = 12 pulgadas
-1 yarda = 3 pies
-1 pulgada = 2.54 centímetros
-
-    */
-
-    //declarar varibles
+        /*
+        Diseñe un programa que permita convertir una cantidad dada en metros a sus equivalentes en 
+        centímetros, 
+        pulgadas, 
+        pies y 
+        yardas. 
+        Considere la siguiente información:
+        1 metro = 100 centímetros
+        1 pulgada = 2.54 centímetros
+        1 pie = 12 pulgadas
+        1 yarda = 3 pies
 
 
+        */
 
-    //ingreso datos
+        //declarar varibles
+        let metros;
+        let centimetros;
+        let pulgadas;
+        let pies;
+        let yardas;
 
+        //ingreso datos
+        metros = prompt("Ingrese metros");
 
+        //procesamiento
+        metros = parseInt(metros);
+        centimetros = 100*metros;
+        pulgadas = 2.54*centimetros;
+        pies = 12*pulgadas;
+        yardas = 3*pies;
 
-    //procesamiento
-
-
-
-
-    //salida datos
-
-
+        //salida datos
+        document.write("Para " + metros + " metros, existen: <br/>");
+        document.write("*" + centimetros + " centimetros. <br/>");
+        document.write("*" + pulgadas + " pulgadas.<br/>");
+        document.write("*" + pies + " pies.<br/>");
+        document.write("*" + yardas + " yardas.");
     </script>
 
 

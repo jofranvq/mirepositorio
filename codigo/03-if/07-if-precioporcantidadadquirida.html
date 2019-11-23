@@ -5,25 +5,59 @@
     <title>Precio por cantidad adquirida</title>
     <script>
     /*
-Una tienda vende un producto a precios unitarios que dependen de la cantidad de
-unidades adquiridas de acuerdo a la siguiente tabla:
+        Una tienda vende un producto a precios unitarios que dependen de la cantidad de
+        unidades adquiridas de acuerdo a la siguiente tabla:
 
-Unidades adquiridas | Precio unitario
-        1 a 25          S/. 27.7
-        26 a 50         S/. 25.5
-         51 a 75        S/. 23.5
-    76 en adelante      S/. 21.5
+        Unidades adquiridas | Precio unitario
+                1 a 25          S/. 27.7
+                26 a 50         S/. 25.5
+                51 a 75        S/. 23.5
+            76 en adelante      S/. 21.5
 
-Adicionalmente, si el cliente adquiere más de 50 unidades la tienda le descuenta el
-15% del importe de la compra; en caso contrario, sólo le descuenta el 5%.
+        Adicionalmente, si el cliente adquiere más de 50 unidades la tienda le descuenta el
+        15% del importe de la compra; en caso contrario, sólo le descuenta el 5%.
 
-Imprimir
-precio unitario:
-Descuento:
-Total a pagar:
-
+        Imprimir
+        precio unitario:
+        Descuento:
+        Total a pagar:
     */
 
+        //declarar varibles
+        let cantidad;
+        let precio_unitario;
+        let descuento;
+        let total_pagar;
+
+        //ingreso datos
+        cantidad = prompt("Ingrese cantidad de articulos a comprar:");
+
+        //procesamiento
+        cantidad = parseFloat(cantidad);
+
+        if (cantidad<=25) {
+            precio_unitario = 27.70;
+            descuento = precio_unitario * cantidad * 0.05;
+            total_pagar = precio_unitario * cantidad - descuento;
+        } else if (cantidad<=50){
+            precio_unitario = 25.50;
+            descuento = precio_unitario * cantidad * 0.05;
+            total_pagar = precio_unitario * cantidad - descuento;
+        } else if (cantidad<=75){
+            precio_unitario = 23.50;
+            descuento = precio_unitario * cantidad * 0.15;
+            total_pagar = precio_unitario * cantidad - descuento;
+        } else {
+            precio_unitario = 21.50;
+            descuento = precio_unitario * cantidad * 0.15;
+            total_pagar = precio_unitario * cantidad - descuento;
+        }
+
+        //Mensajes de salida
+        document.write("Total de Productos comprados: " + cantidad + ". <br/>");
+        document.write("Precio Unitario: " + precio_unitario + ". <br/>");
+        document.write("Descuento: " + descuento + ". <br/>");
+        document.write("Total a Pagar: " + total_pagar + ".");
     </script>
 
 </head>
