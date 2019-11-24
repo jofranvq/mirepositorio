@@ -14,6 +14,48 @@
             
             */
 
+
+            let celular = {
+                marca:"samsung",
+                modelo:"S8",
+                color:"negro",
+
+                //metodo get
+                imprimirPropiedades:function(){
+                        document.write("<br/>marca: " + this.marca);
+                        document.write("<br/> modelo: " + this.modelo);
+                        document.write("<br/> color: " + this.color);
+                },
+
+                //metodo set
+                tomarPropiedades:function(nuevaMarca, nuevoModelo, nuevoColor){
+                    this.marca = nuevaMarca;
+                    this.modelo = nuevoModelo;
+                    this.color = nuevoColor;
+                }
+
+            } ;
+
+            celular.imprimirPropiedades();
+
+            celular.tomarPropiedades("apple", "x", "dorado");
+
+            document.write("<br/><br/>Modificando los datos<br/>");
+            celular.imprimirPropiedades();
+
+            let marca1;
+            let modelo1;
+            let color1;
+
+            marca1 = prompt("Ingrese marca de celular: ");
+            modelo1 = prompt("Ingrese modelo de celular: ");
+            color1 = prompt("Ingrese color de celular: ");
+
+            celular.tomarPropiedades(marca1, modelo1, color1);
+
+            document.write("<br/><br/>Modificando los datos con los ingresados por ud.<br/>");
+            celular.imprimirPropiedades();
+
         </script>
     </head>
     <body>
