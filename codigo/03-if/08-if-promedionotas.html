@@ -17,10 +17,11 @@
 
         //declarar varibles
         let promedio_final;
-        let promedio_simple;
         let practica1;
         let practica2;
         let practica3;
+        let numero_formateado;
+        let numero_math;
 
         //ingreso datos
         practica1 = prompt("Ingrese la nota de la primera practica:");
@@ -34,24 +35,24 @@
 
         if (practica1>20 || practica2>20 || practica3>20){
             document.write("las notas ingresadas no son validas. Por favor refresque la pagina y vuelva a intentarlo.");
-        } else if (){
-
-        }
-
-        if (numero%2==0) {
-            document.write("el numero " + numero + " es par.");
         } else {
-            document.write("el numero " + numero + " es impar.");
+            if(practica3 > 10){
+                practica3 = practica3 + 2;
+            }
+
+            //formular del promedio = sumaelementos/cantidadElementos
+            promedio_final = (practica1+practica2+practica3)/3;
+            //numero_formateado = new Intl.NumberFormat("en","5").format(promedio_final);
+            promedio_final = Math.round(promedio_final*100)/100;
+            //alert(numero_math);
+            //impresion de datos
+            document.write("La practica 1 es " + practica1 + ".<br/>");
+            document.write("La practica 2 es " + practica2 + ".<br/>");
+            document.write("La practica 3 es " + practica3 + ".<br/>");
+            document.write("El promedio final es " + promedio_final + ".");
+            //document.write("El promedio final formateado con 3 decimales es " + numero_formateado + ".");
+            //document.write("El promedio final formateado con 2 decimales es " + numero_math + ".");
         }
-
-        //formular del promedio = sumaelementos/cantidadElementos
-
-
-        //impresion de datos
-        document.write("La practica 1 es " + practica1 + ".");
-        document.write("La practica 2 es " + practica2 + ".");
-        document.write("La practica 3 es " + practica3 + ".");
-        document.write("El promedio final es " + promedio_final + ".");
 
     </script>
 

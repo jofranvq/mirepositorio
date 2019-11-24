@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-<script>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            /*
+            Diseñe un algoritmo que determine si un visitante a un museo es mayor de edad o menor de edad.
+            */
 
-/*
-Diseñe un algoritmo que determine si un visitante a un museo es mayor de edad o
-menor de edad.
-*/
+            //declarar variables
+            let visitante;
+            let edad;
 
+            //ingreso datos
+            edad = prompt("Ingrese la edad del visitante por favor:");
 
-</script>
+            //procesamiento
+            edad = parseInt(edad);
+            if (edad >= 18){
+                document.write("El visitante tiene " + edad + " años de edad, por lo tanto es mayor de edad");
+            }else {
+                document.write("El visitante tiene " + edad + " años de edad, por lo tanto es menor de edad");
+            }
+        </script>
 
-</head>
-<body>
+    </head>
+    <body>
 
-</body>
+    </body>
 </html>
