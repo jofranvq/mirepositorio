@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="saludo"></h1>
+    <h2 id="suma"></h2>
+    <H3 class="titulito"></H3>
+
+<script>
+
+let saludoID = document.getElementById("saludo");
+saludoID.innerHTML = "HOLA COMO ESTAS"; 
+
+//alert(saludoID.innerHTML);
+
+//let titulitoClass = document.getElementByClass("titulito");
+let titulitoClass = document.getElementsByClassName("titulito");
+//titulitoClass.innerHTML = "TITULON";
+titulitoClass.item(0).innerHTML = "TITULON";
+//alert(titulitoClass.item(0).innerHTML);
+
+</script>
+
+</body>
+</html>

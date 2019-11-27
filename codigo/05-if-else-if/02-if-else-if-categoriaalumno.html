@@ -20,7 +20,39 @@ Promedio        Categoría
 
 */
 
+        //declaración variables
+        let promedio;
+        let categoria;
 
+        //ingreso de datos
+        promedio = prompt("Ingrese el Promedio Ponderado del estudiante:");
+
+        //procesamiento
+        horas = parseInt(horas);
+        
+        if (dia == 'lunes' || dia == 'martes' || dia == 'miercoles' || dia == 'jueves') {
+            
+            tarifa_fija = 3.5*horas;
+
+        }else if (dia == 'viernes' || dia == 'sabado') {
+            
+            tarifa_fija = 3.5*horas;
+
+        } else if (dia == 'domingo') {
+            
+            tarifa_fija = 3.5*horas;
+
+        } 
+
+        if (tarifa_fija !== undefined) {
+        
+            document.write("el cliente debe pagar " + tarifa_fija + " soles, ya que hoy es: " + dia + " y estuvo un total de " + horas + " horas.");
+
+        }else{
+
+            document.write("Ingrese datos correctos. Por favor recargue la pagina y vuelva a intentarlo");
+
+        }
 
 
 

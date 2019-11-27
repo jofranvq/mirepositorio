@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo-principal"> Clases Arrow </h1>
+    <h2 id="suma"></h2>
+    <h3 id="suma2"></h3>
+    <script>
+        let tituloID = document.getElementById("titulo-principal");
+
+        function cambiarTitulo(texto) {
+            return tituloID.innerHTML = texto;
+        }
+
+        //alert(cambiarTitulo("JOHANNA"));
+        cambiarTitulo("JOHANNA");
+
+        let sumaID = document.getElementById("suma");
+        function suma(num1, num2) {
+            return num1+num2;
+        }
+        sumaID.innerHTML = suma(20,10);
+
+        let suma2 = (num1, num2) => {
+            return num1+num2;
+        }
+        let sumaID2 = document.getElementById("suma2");
+        sumaID2.innerHTML = suma2(30,20);
+        
+    </script>
+</body>
+</html>
