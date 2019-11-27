@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-<script>
+    <script>
 
-/*
-En el siguiente ejercicio, reemplaze la estructura if...else...if por la estructura switch.
+        /*
+        En el siguiente ejercicio, reemplaze la estructura if...else...if por la estructura switch.
+        if( producto == 0 )
+        precio = 25;
+        else if( producto == 1 )
+        precio = 15;
+        else if( producto == 2 )
+        precio = 10;
+        else
+        precio = 12;
+        */
 
-if( producto == 0 )
-precio = 25;
-else if( producto == 1 )
-precio = 15;
-else if( producto == 2 )
-precio = 10;
-else
-precio = 12;
+        //declaracion
+        var producto;
+        var precio;
 
-*/
+        //entrada de datos
+        producto = prompt("ingrese cantidad de productos");
 
-    var producto;
+        //procesamiento
+        producto = parseInt(producto);
+        switch(producto){
+            case 0:
+                precio = 25;
+                break;
+            case 1:
+                precio = 15;
+                break;
+            case 2:
+                precio = 10;
+                break;
+            default:
+                precio = 12;
+                break;
+        }
 
-    producto = 2;
+        //mostrando datos
+        document.write("el precio es: " + precio);
 
-    switch(producto) {
-        case 0:
-            precio = 25;
-            break;
-        case 1:
-            precio = 15;
-            break;
-        case 2:
-            precio = 10;
-            break;
-        case 3:
-            document.write("marzo");
-            break;
-        default:
-            precio = 12;
-
-    }
-
-</script>
+    </script>
 
 
 </head>

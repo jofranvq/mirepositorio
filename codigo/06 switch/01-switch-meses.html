@@ -6,44 +6,65 @@
 </head>
 <body>
 
-   <script>
-   /*
+  <script>
+    /*
+      imprimir el nombre de un mes conociendo los valores numéricos del mes
+      1 enero
+      2 febrero
+      .
+      .
+      .
+      12 diciembre
+    */
 
-   imprimir el nombre de un mes conociendo los valores numéricos del mes
+    //declaracion
+    var mes;
 
-   1 enero
-   2 febrero
-  .
-  .
-  .
-   12 diciembre
+    //entrada de datos
+    mes = prompt("ingrese el numero del mes");
 
-   */
-
-       //declaracion
-
-        var mes;
-
-       //entrada de datos
-
-       mes = prompt("ingrese el numero del mes");
-
-       //procesamiento
-
-       switch(mes) {
-  case "1":
-    document.write("enero");
-    break;
-  case 2:
-    document.write("febrero");
-    break;
-  case 3:
-    document.write("marzo");
-    break;
-  default:
-    document.write("no es valido");
-               ;
-}
+    //procesamiento
+    switch(mes) {
+      case "1":
+        document.write("enero");
+        break;
+      case "2":
+        document.write("febrero");
+        break;
+      case "3":
+        document.write("marzo");
+        break;
+      case "4":
+        document.write("abril");
+        break;
+      case "5":
+        document.write("mayo");
+        break;
+      case "6":
+        document.write("junio");
+        break;
+      case "7":
+        document.write("julio");
+        break;
+      case "8":
+        document.write("agosto");
+        break;
+      case "9":
+        document.write("setiembre");
+        break;
+      case "10":
+        document.write("octubre");
+        break;
+      case "11":
+        document.write("noviembre");
+        break;
+      case "12":
+        document.write("diciembre");
+        break;
+      default:
+        document.write("no es valido");
+        break;
+    }
 
 </script>
 
