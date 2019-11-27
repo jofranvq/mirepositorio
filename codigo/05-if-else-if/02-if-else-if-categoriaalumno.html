@@ -28,33 +28,20 @@ Promedio        Categoría
         promedio = prompt("Ingrese el Promedio Ponderado del estudiante:");
 
         //procesamiento
-        horas = parseInt(horas);
-        
-        if (dia == 'lunes' || dia == 'martes' || dia == 'miercoles' || dia == 'jueves') {
-            
-            tarifa_fija = 3.5*horas;
+        promedio = parseInt(promedio);
 
-        }else if (dia == 'viernes' || dia == 'sabado') {
-            
-            tarifa_fija = 3.5*horas;
-
-        } else if (dia == 'domingo') {
-            
-            tarifa_fija = 3.5*horas;
-
-        } 
-
-        if (tarifa_fija !== undefined) {
-        
-            document.write("el cliente debe pagar " + tarifa_fija + " soles, ya que hoy es: " + dia + " y estuvo un total de " + horas + " horas.");
-
-        }else{
-
-            document.write("Ingrese datos correctos. Por favor recargue la pagina y vuelva a intentarlo");
-
+        if (promedio >= 17) {
+            categoria = 'A';
+        } else if (promedio >= 14) {
+            categoria = 'B';
+        } else if (promedio >= 12) {
+            categoria = 'C';
+        } else {
+            categoria = 'D';
         }
-
-
+        
+        //mensaje
+        document.write("La categoría del estudiante es: " + categoria);
 
     </script>
 

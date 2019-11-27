@@ -4,18 +4,42 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-<script>
+    <script>
 
-/*
-Diseñe un programa que lea un número entero en el intervalo de 1 a 4,
-correspondiente al estado civil de una persona y determine el nombre del estado
-civil. Considere: 1 para soltero, 2 para casado, 3 para viudo y 4 para divorciado. Si
-el número no está en el intervalo de 1 a 4, imprima un mensaje de error.
+        /*
+        Diseñe un programa que lea un número entero en el intervalo de 1 a 4,
+        correspondiente al estado civil de una persona y determine el nombre del estado
+        civil. Considere: 1 para soltero, 2 para casado, 3 para viudo y 4 para divorciado. 
+        Si el número no está en el intervalo de 1 a 4, imprima un mensaje de error.
 
-*/
+        */
 
+        //declaración variables
+        let estado_civil;
+        let numero;
 
-</script>
+        //ingreso de datos
+        numero = prompt("Ingrese el número para definir el sexo");
+
+        //procesamiento
+        numero = parseInt(numero);
+
+        if (numero == 1) {
+            estado_civil = 'Soltero';
+        } else if (numero == 2) {
+            estado_civil = 'Casado';
+        } else if (numero == 3) {
+            estado_civil = 'Viudo';
+        } else if (numero == 4) {
+            estado_civil = 'Divorciado';
+        } else {
+            estado_civil = 'Complicado';
+        }
+        
+        //mensaje
+        document.write("El estado civil de la persona es: " + estado_civil);
+
+    </script>
 
 </head>
 <body>
