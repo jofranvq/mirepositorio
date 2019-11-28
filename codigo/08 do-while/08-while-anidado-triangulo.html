@@ -2,40 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Do While - dibujar</title>
 
     <script>
 
-    /*
-
-dibujar
-
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
-
-    */
+        /*
+            dibujar
+            *
+            **
+            ***
+            ****
+            *****
+            ******
+            *******
+            ********
+            *********
+            **********
+        */
 
 
         var tamanio;
-        var counter;
+        var contador = 1;
         var triangulo="";
 
         tamanio = prompt("ingresar tamaño");
 
-        for (counter = 1; counter <= tamanio; counter++) {
+        do {
             triangulo=triangulo+"*";
             document.write(triangulo);
-
             document.write("<br>");
-        }
+            contador++;
+        } while (contador <= tamanio);
 
     </script>
 

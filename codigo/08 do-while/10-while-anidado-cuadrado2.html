@@ -7,24 +7,47 @@
         <script>
 
             /*
-
-            dibujar
-
-        **********
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        **********
-
+                dibujar
+                **********
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                **********
             */
 
+            //para que parezca un cuadrado tuve que poner 2 espacios en vez de uno que era como venia en el ejercicio.. sino se veía feo.
+            let ancho=0;
+            let largo=0;
+            let tamanio;
 
+            tamanio = prompt("Ingrese tamaño por favor:");
 
+            do {
+
+                do {
+                    
+                    if (largo == 0 || largo == tamanio-1 || ancho == 0 || ancho == tamanio -1) {
+                    
+                        document.write("*");
+
+                    }else {
+                        document.write("&nbsp;&nbsp;");                      
+
+                    } 
+                    ancho++;
+
+                } while (ancho<tamanio);
+                
+                ancho=0;
+                document.write("<br/>");
+                largo++;
+                
+            } while (largo<tamanio);
 
         </script>
 

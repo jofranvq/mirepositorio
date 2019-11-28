@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Do While - 20 nros al azar</title>
     <script>
 
         /* imprima 20 numeros al azar y además imprimir cuantos impares y pares hubo. */
+
+        let contador = 0;
+        let numero = 0;
+        let impar = 0;
+        let par = 0;
+        
+        do {
+            
+            numero = Math.round(Math.random()*50);
+            document.write(numero);
+            document.write("<br/>");
+
+            if (numero%2==0) {
+                par++;
+            }else{
+                impar++;
+            }
+
+            contador++;
+
+        } while (contador < 20);
+
+        document.write("La cantidad de números pares es: " + par);
+        document.write("<br/>La cantidad de números impares es: " + impar);
 
     </script>
 </head>

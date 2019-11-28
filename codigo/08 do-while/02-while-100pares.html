@@ -2,19 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>for - los numeros pares del 1 al 100</title>
-
+        <title>Do-While - los numeros pares del 1 al 100</title>
 
         <script>
 
             /*
+                mostrar los números pares que hay entre el 1 hasta el 100 usando la estructura de repetición Do while.
+                tip: un numero par es aquel que al dividirlo entre 2 su residuo es 0
+            */
 
-    mostrar los números pares que hay entre el 1 hasta el 100 usando la estructura de repetición for.
+            //declarar variables
+            var counter = 1;
 
-tip: un numero par es aquel que al dividirlo entre 2 su residuo es 0
-    */
+            //procesamiento
 
-
+            do {
+                if (counter%2==0) {
+                    document.write(counter);    
+                    document.write("<br>");
+                }
+                counter++;
+            }while(counter <= 100);
+            
 
         </script>
     </head>

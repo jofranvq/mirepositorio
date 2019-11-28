@@ -2,25 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>for - 100 numeros al azar</title>
+        <title>Do While - 100 numeros al azar</title>
 
 
         <script>
 
             /*
 
-    mostrar 100 numeros al azar entre 0 y 100
+            mostrar 100 numeros al azar entre 0 y 100 
+            Math.round(Math.random()*100);
 
-    Math.round(Math.random()*100);
-
-    */
+            */
 
             //declarar variables
-
+            let contador = 0;
 
             //procesamiento
             // inicio del bucle; condición; expresión incremental
 
+            do {
+                document.write(Math.round(Math.random()*100) + "<br/>");
+                contador++;
+            } while (contador <=100);
 
         </script>
     </head>

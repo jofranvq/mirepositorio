@@ -20,17 +20,34 @@
         */
 
         var tamanio;
-        var counter;
+        var counter = 1;
         var triangulo="";
 
         tamanio = prompt("ingresar tamaño");
 
-        for (counter = 1; counter <= tamanio; counter++) {
+        while(counter <= tamanio){
             triangulo=triangulo+"*";
             document.write(triangulo);
             document.write("<br>");
+            counter++;
         }
+/*
+        let tamanio;
+        let contador=0;
+        let contador2=0; 
 
+        tamanio = prompt("ingresar tamaño:");
+
+        while (contador <= tamanio) {
+            while (contador2 < contador) {
+                document.write("*")
+                contador2++;
+            }
+            document.write("<br/>");
+            contador++;
+            contador2 = 0;
+        }
+*/
     </script>
 
 </head>

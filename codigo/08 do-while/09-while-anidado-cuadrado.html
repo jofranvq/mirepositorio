@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Do While - Dibujar Cuadrado</title>
 
     <script>
 
         /*
-
         dibujar
-
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
@@ -20,23 +18,25 @@
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
-
         */
 
-        var tamanio;
-        var counter;
-        var espacios;
+        let ancho=0;
+        let largo=0;
+        let tamanio;
 
-        tamanio = prompt("ingresar tamaño");
+        tamanio = prompt("Ingrese tamaño del lado del cuadrado");
 
-        for (counter = 1; counter <= tamanio; counter++) {
-           for(espacios = 1; espacios<=tamanio;espacios++){
+        do {
+            
+            do {
                 document.write("* ");
-                }
-            document.write("<br>");
-            }
+                ancho++;
+            } while (ancho<tamanio);
+            document.write("<br/>");
+            ancho=0;
+            largo++;
 
-
+        } while (largo<tamanio);
 
     </script>
 
