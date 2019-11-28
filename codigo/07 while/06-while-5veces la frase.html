@@ -5,13 +5,18 @@
     <title>Document</title>
     <script>
 
-    /*
+        /*
+        Introducir una frase por teclado. Imprimirla cinco veces en filas consecutivas
+        */
+        let frase;
+        let contador = 0;
 
-    Introducir una frase por teclado. Imprimirla cinco veces en filas
-consecutivas
+        frase = prompt("Ingrese frase:");
 
-    */
-
+        while (contador<5) {
+            document.write(frase+"<br/>");
+            contador++;
+        }
 
     </script>
 

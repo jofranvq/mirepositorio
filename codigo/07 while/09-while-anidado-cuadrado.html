@@ -7,9 +7,7 @@
     <script>
 
         /*
-
         dibujar
-
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
@@ -20,10 +18,23 @@
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
-
         */
 
+        let ancho=0;
+        let largo=0;
+        let tamanio;
 
+        tamanio = prompt("Ingrese tamaño del lado del cuadrado");
+
+        while (largo<tamanio) {
+            while (ancho<tamanio) {
+                document.write("* ");
+                ancho++;
+            }
+            document.write("<br/>");
+            ancho=0;
+            largo++;
+        }
 
     </script>
 

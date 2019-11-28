@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
 
-<script>
+        <script>
+        /*
+            genere 5 numeros al azar y calcule la suma de dichos numeros
+        */
 
-/*
+        let numero;
+        let texto = "";
+        let resultado = 0;
+        let contador = 0;
 
-genere 5 numeros al azar y calcule la suma de dichos numeros
+        while (contador < 5) {
+            numero = Math.round(Math.random()*20);
 
-*/
+            if (contador == 0) {
+                texto = numero.toString()
+            }else{
+                texto = texto + " + " +  numero.toString() ;
+            }            
+            resultado = resultado + numero;
+            contador++;
+        }
 
+        document.write("la suma de " + texto + " es igual a " + resultado);
 
-</script>
+        </script>
 
-</head>
-<body>
+    </head>
+    <body>
 
-</body>
+    </body>
 </html>
