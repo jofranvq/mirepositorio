@@ -2,39 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>For  - dibujar</title>
 
     <script>
 
-    /*
+        /*
+            dibujar
+            *
+            **
+            ***
+            ****
+            *****
+            ******
+            *******
+            ********
+            *********
+            **********
+        */
 
-dibujar
-
-*
-**
-***
-****
-*****
-******
-*******
-********
-*********
-**********
-
-    */
-
-
-        var tamanio;
-        var counter;
-        var triangulo="";
+        let tamanio;
+        let triangulo="";
 
         tamanio = prompt("ingresar tamaño");
 
-        for (counter = 1; counter <= tamanio; counter++) {
+        for (let index = 0; index < tamanio; index++) {
+            
             triangulo=triangulo+"*";
             document.write(triangulo);
-
             document.write("<br>");
+
         }
 
     </script>

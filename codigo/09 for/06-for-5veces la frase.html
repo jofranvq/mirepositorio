@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>For - Imprimir 5 veces la frase</title>
     <script>
 
     /*
-
-    Introducir una frase por teclado. Imprimirla cinco veces en filas
-consecutivas
-
+    Introducir una frase por teclado. Imprimirla cinco veces en filas consecutivas
     */
+
+    let frase;
+    frase = prompt("Ingrese frase:");
+
+    for (let index = 0; index < 5; index++) {
+        document.write(frase+"<br/>");
+    }
+
     </script>
 
 </head>

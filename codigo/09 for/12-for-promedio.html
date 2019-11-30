@@ -2,14 +2,35 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>For - Promedio de 5 numeros</title>
 
         <script>
 
-/*
-genere 5 numeros al azar y calcule el promedio de dichos numeros.
-tip: promedio es igual a la suma de los numeros entre la cantidad de numeros que hay.
-*/
+            /*
+            genere 5 numeros al azar y calcule el promedio de dichos numeros.
+            tip: promedio es igual a la suma de los numeros entre la cantidad de numeros que hay.
+            */
+
+            let numero;
+            let texto = "";
+            let resultado = 0;
+
+            for (let index = 0; index < 5; index++) {
+                
+                numero = Math.round(Math.random()*20);
+
+                if (index == 0) {
+                    texto = numero.toString()
+                }else{
+                    texto = texto + " + " +  numero.toString() ;
+                }            
+                resultado = resultado + numero;
+                
+            }
+
+            resultado = resultado/5;
+
+            document.write("la suma de " + texto + " es igual a " + resultado);
 
         </script>
 

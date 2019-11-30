@@ -2,29 +2,46 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>For - cuadrado vacio</title>
 
         <script>
 
             /*
-
-            dibujar
-
-        **********
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        *        *
-        **********
-
+                dibujar
+                **********
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                *        *
+                **********
             */
 
+            //para que parezca un cuadrado tuve que poner 2 espacios en vez de uno que era como venia en el ejercicio.. sino se veía feo.
+            let ancho=0;
+            let largo=0;
+            let tamanio;
 
+            tamanio = prompt("Ingrese tamaño por favor:");
 
+            for (let largo = 0; largo < tamanio; largo++) {
+                
+                for (let ancho = 0; ancho < tamanio; ancho++) {
+                    
+                    if (largo == 0 || largo == tamanio-1 || ancho == 0 || ancho == tamanio -1) {
+                        document.write("*");
+                    }else {
+                        document.write("&nbsp;&nbsp;");
+                    } 
+
+                }
+
+                document.write("<br/>");
+
+            }
 
         </script>
 

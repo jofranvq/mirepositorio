@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>For - Dibujar Cuadrado</title>
 
     <script>
-
         /*
-
         dibujar
-
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
@@ -20,9 +17,21 @@
         * * * * * * * * * *
         * * * * * * * * * *
         * * * * * * * * * *
-
         */
 
+        let ancho=0;
+        let tamanio;
+
+        tamanio = prompt("Ingrese tamaño del lado del cuadrado");
+
+        for (let largo = 0; largo < tamanio; largo++) {
+            for (let ancho = 0; ancho < tamanio; ancho++) {
+                document.write("* ");
+            }
+            document.write("<br/>");
+        }
+
+/*
         var tamanio;
         var counter;
         var espacios;
@@ -35,7 +44,7 @@
                 }
             document.write("<br>");
             }
-
+*/
 
 
     </script>
