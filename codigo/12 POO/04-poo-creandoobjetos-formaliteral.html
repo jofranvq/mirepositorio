@@ -7,16 +7,38 @@
         <script>
 
             /*
-
             1. Crear un objeto persona con tres propiedades (nombre, edad, sueldo)
-
             2. Crear metodos para imprimir cada una de las propiedades del objeto.
-
             3. Crear metodos para cambiar cada una de las propiedades del objeto. Tip: usar parametros
-
             4. Imprimir cada uno de los varlores de las propiedades.
-
             */
+
+            let persona = {
+                nombre:"Johanna",
+                edad: 34,
+                sueldo: 10000,
+
+                //metodo get
+                imrpimirPersona:function(){
+                    document.write("<br/>nombre: " + this.nombre);
+                    document.write("<br/>edad: " + this.edad);
+                    document.write("<br/>sueldo: " + this.sueldo);
+                },
+
+                //metodo set
+                modificarPropiedades:function(nuevoNombre, nuevaEdad, nuevoSueldo){
+                    this.nombre = nuevoNombre;
+                    this.edad = nuevaEdad;
+                    this.sueldo = nuevoSueldo;
+                }
+
+            };
+
+            persona.imrpimirPersona();
+
+            persona.modificarPropiedades("Michael", 32, 8000);
+
+            persona.imrpimirPersona();
 
         </script>
     </head>

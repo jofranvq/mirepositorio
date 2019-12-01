@@ -2,19 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>POO - creando objetos de forma literal</title>
 
     <script>
+      /*
+        Crear a partir del objeto persona, 4 personas más.
+        motrar un listado con todas las personas y sus propiedades
+        mostrar la edad promedio de las personas
+        mostrar la persona con menor edad
+      */
 
-        /*Crear a partir del objeto persona, 4 personas más.
+            let persona = {
+                nombre:"Johanna",
+                edad: 34,
+                sueldo: 10000,
 
-          motrar un listado con todas las personas y sus propiedades
+                //metodo get
+                imrpimirPersona:function(){
+                    document.write("<br/>nombre: " + this.nombre);
+                    document.write("<br/>edad: " + this.edad);
+                    document.write("<br/>sueldo: " + this.sueldo);
+                },
 
-          mostrar la edad promedio de las personas
+                //metodo set
+                modificarPropiedades:function(nuevoNombre, nuevaEdad, nuevoSueldo){
+                    this.nombre = nuevoNombre;
+                    this.edad = nuevaEdad;
+                    this.sueldo = nuevoSueldo;
+                }
 
-          mostrar la persona con menor edad
+            };
 
-        */
+            persona.imrpimirPersona();
+            let edadPromedio = 0.0;
+            let edadMenor = 0;
+            edadPromedio = edadPromedio + persona.edad;
+            edadMenor = persona.edad;
+
+            persona.modificarPropiedades("Michael", 32, 8000);
+            persona.imrpimirPersona();
+            edadPromedio = edadPromedio + persona.edad;
+            if (edadMenor > persona.edad) {
+              edadMenor = persona.edad;
+            }
+
+            persona.modificarPropiedades("Maykell", 10, 1000);
+            persona.imrpimirPersona();
+            edadPromedio = edadPromedio + persona.edad;
+            if (edadMenor > persona.edad) {
+              edadMenor = persona.edad;
+            }
+
+            persona.modificarPropiedades("Adriano", 14, 2000);
+            persona.imrpimirPersona();
+            edadPromedio = edadPromedio + persona.edad;
+            if (edadMenor > persona.edad) {
+              edadMenor = persona.edad;
+            }         
+            
+            edadPromedio = edadPromedio/4;
+            document.write("<br/>La edad Promedio es: " + edadPromedio);
+            document.write("<br/>La edad Menor es: " + edadMenor);
+            
 
     </script>
 

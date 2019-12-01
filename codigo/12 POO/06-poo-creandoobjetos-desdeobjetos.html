@@ -2,23 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>POO - creando objetos de forma literal</title>
 
     <script>
-
-        /*Crear a partir del objeto auto, 4 autos más.
-
+        /*
+          Crear a partir del objeto auto, 4 autos más.
           motrar un listado con todos los autos
-
-          marca  precio
-          marca  precio
-          marca  ṕrecio
-
           mostrar el precio promedio de los autos
-
           mostrar el auto con más precio.
-
         */
+
+        let auto = {
+                marca:"hyndai",
+                precio: 10000,
+                color:"beige",
+
+                //metodo Get
+                imrpimirPropiedades:function(){
+                    document.write("<br/>marca:"+ this.marca);
+                    document.write("<br/>precio:"+ this.precio);
+                    document.write("<br/>color:"+ this.color);
+                },
+
+                //metodo Set
+                tomarPropiedades:function(nuevaMarca, nuevoPrecio, nuevoColor){
+                    this.marca = nuevaMarca;
+                    this.precio = nuevoPrecio;
+                    this.color = nuevoColor;
+                }
+
+            };
+
+            auto.imrpimirPropiedades();
+            let precioPromedio = 0.0;
+            let precioMayor = 0;
+            let marcaMayor;
+            let colorMayor;
+            precioPromedio = precioPromedio + auto.precio;
+            precioMayor = auto.precio;
+            marcaMayor = auto.marca;
+            colorMayor = auto.color;
+
+            auto.tomarPropiedades("toyota", 30000, "negro");
+            auto.imrpimirPropiedades();
+            precioPromedio = precioPromedio + auto.precio;
+            if (precioMayor < auto.precio) {
+              precioMayor = auto.precio;
+              marcaMayor = auto.marca;
+              colorMayor = auto.color;
+            }
+
+            auto.tomarPropiedades("audi", 50000, "rojo");
+            auto.imrpimirPropiedades();
+            precioPromedio = precioPromedio + auto.precio;
+            if (precioMayor < auto.precio) {
+              precioMayor = auto.precio;
+              marcaMayor = auto.marca;
+              colorMayor = auto.color;
+            }
+
+            auto.tomarPropiedades("tico", 5000, "amarillo");
+            auto.imrpimirPropiedades();
+            precioPromedio = precioPromedio + auto.precio;
+            if (precioMayor < auto.precio) {
+              precioMayor = auto.precio;
+              marcaMayor = auto.marca;
+              colorMayor = auto.color;
+            }
+
+            precioPromedio = precioPromedio/4;
+            document.write("<br/>El precio Promedio es: " + precioPromedio);
+            document.write("<br/>el auto más caro es: ");
+            auto.tomarPropiedades(marcaMayor, precioMayor, colorMayor);
+            auto.imrpimirPropiedades();
 
     </script>
 

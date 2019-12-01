@@ -27,12 +27,10 @@
 
         document.write("nombre " + gato.nombre);
         document.write("nombre " + gato["nombre"]);
-
         gato.decirNombre();
 
         gato.cambiarNombre("lala");
         gato.decirNombre();
-
 
         var gato2= Object.create(gato);
         gato2.cambiarNombre("minino");
