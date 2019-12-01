@@ -2,19 +2,37 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Array - Arreglo de 5 Mayor y Menor</title>
 
         <script>
-
+            
             /*
-
-Cargar un vector con cinco números enteros y determinar lo siguiente: ¿Cual es el número mayor?  y ¿Cual es el número menor?
-
+                Cargar un vector con cinco números enteros y determinar lo siguiente: ¿Cual es el número mayor?  y ¿Cual es el número menor?
             */
 
+            let arreglo = [];
+            let mayor=0;
+            let menor=0;
+            let numero=0;
 
+            for (let index = 0; index < 5; index++) {
+                numero = Math.round(Math.random()*20);
+                arreglo.push(numero);
+                
+                if (mayor == 0 && menor == 0) {
+                    mayor = numero;
+                    menor = numero;
+                } else if (numero > mayor) {
+                    mayor = numero;
+                } else if (numero < menor) {
+                    menor = numero;
+                }
 
+            }
 
+            document.write("Arreglo: " + arreglo + "<br/><br/>");
+            document.write("Número Mayor: " + mayor + "<br/><br/>");
+            document.write("Número Menor: " + menor + "<br/><br/>");
 
         </script>
 

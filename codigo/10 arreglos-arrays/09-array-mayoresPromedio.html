@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Array - 10 numeros azar - Imprimir Promedio</title>
 
         <script>
 
@@ -14,9 +14,30 @@
             imprimir posición y numero mayores al promedio:   pos3->40
             */
 
+            let arreglo = [];
+            let suma = 0;
+            let promedio = 0;
 
+            for (let index = 0; index < 10; index++) {
+                arreglo.push(Math.round(Math.random()*100));    
+            }
 
+            document.write("Arreglo: " + arreglo + "<br/><br/>");
 
+            for (let index = 0; index < arreglo.length; index++) {
+                suma = suma + arreglo[index];
+            }
+
+            promedio = suma/arreglo.length;
+            document.write("Promedio: " + promedio + "<br/>");
+            document.write("Posición y Valor de los Números Mayores al Promedio: <br/>");
+
+            for (let index = 0; index < arreglo.length; index++) {
+                if (arreglo[index] > promedio) {
+                    document.write("pos"+ index + " -> " + arreglo[index] + "<br/>");
+                }
+                
+            }
 
         </script>
 

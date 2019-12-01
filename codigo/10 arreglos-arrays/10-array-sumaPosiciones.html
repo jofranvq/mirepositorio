@@ -2,26 +2,38 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Array - 3 arreglos</title>
 
         <script>
 
             /*
-
             genere un arreglo A con 10 numeros al azar.
             genere un arreglo B con 10 numeros al azar.
             imprimir el arreglo A
             imprimir el arreglo B
-
-            sume el primerer elemento de A con el primer elemento de B y asi sucesivamente con los 10 elementos y almecene el resultado en un arreglo C.
-
+            sume el primer elemento de A con el primer elemento de B y asi sucesivamente con los 10 elementos y almecene el resultado en un arreglo C.
             imprimir el arreglo C
-
             */
 
+            let arregloA = [];
+            let arregloB = [];
+            let arregloC = [];
+            let suma = 0;
 
+            for (let index = 0; index < 10; index++) {
+                arregloA.push(Math.round(Math.random()*100));
+                arregloB.push(Math.round(Math.random()*100));
+            }
 
+            document.write("Arreglo A: " + arregloA + "<br/><br/>");
+            document.write("Arreglo B: " + arregloB + "<br/><br/>");
 
+            for (let index = 0; index < 10; index++) {
+                suma = arregloA[index] + arregloB[index];
+                arregloC.push(suma);
+            }
+
+            document.write("Arreglo C: " + arregloC + "<br/><br/>");
 
         </script>
 

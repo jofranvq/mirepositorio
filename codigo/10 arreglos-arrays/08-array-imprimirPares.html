@@ -2,20 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Array - Arreglo con 10 numeros al azar - Imprimir Pares</title>
 
         <script>
 
             /*
-
             genere un arreglo con 10 numeros al azar.
             imprimir solo los números pares del arreglo
-
             */
 
+            let arreglo = [];
 
+            for (let index = 0; index < 10; index++) {
+                arreglo.push(Math.round(Math.random()*100));    
+            }
 
+            document.write(arreglo + "<br/><br/>");
 
+            for (let index = 0; index < arreglo.length; index++) {
+                if (arreglo[index]%2==0) {
+                    document.write(arreglo[index] + ", ");
+                }
+            }
 
         </script>
 

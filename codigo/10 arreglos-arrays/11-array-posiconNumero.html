@@ -2,25 +2,35 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Array - Arreglo A buscar posicion</title>
 
         <script>
 
             /*
-
             genere un arreglo  con 10 numeros al azar.
-
             imprimir el arreglo A
-
             pregunto por la posición en la que se encuentre un numero del arreglo mediante el prompt
-
             imprimir la posición del elemento que se pregunto.
-
             */
 
+            let arregloA = [];
+            let numero;
+            let indice;
 
+            for (let index = 0; index < 10; index++) {
+                arregloA.push((Math.round(Math.random()*20)).toString());
+            }
 
+            document.write("Arreglo A: " + arregloA + "<br/><br/>");
+            numero = prompt("Ingrese número a buscar");
+            document.write("Número Ingresado: " + numero + "<br/>");
+            indice = arregloA.indexOf(numero);
 
+            if (indice >= 0) {
+                document.write("Posición en el arreglo: " + indice + "<br/>");
+            }else{
+                document.write(" El número ingresado no forma parte del arreglo <br/>");
+            }
 
         </script>
 
