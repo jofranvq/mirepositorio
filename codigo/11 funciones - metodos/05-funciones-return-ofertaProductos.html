@@ -2,34 +2,70 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Document</title>
+        <title>Funciones - Calcular Importe a Pagar</title>
 
         <script>
-
             /*
-Una tienda vende tres tipos de productos a los precios unitarios dados en la
-siguiente tabla:
+            Una tienda vende tres tipos de productos a los precios unitarios dados en la siguiente tabla:
+            Producto        Precio
+            P1              S/. 15.0
+            P2              S/. 17.5 
+            P3              S/. 20.0
 
-Producto        Precio
-P1              S/. 15.0
-P2              S/. 17.5
-P3              S/. 20.0
+            Como oferta la tienda ofrece un regalo de acuerdo a la siguiente tabla:
+            Unidades adquiridas     Regalo
+            1 a 25                  un lapicero
+            26 a 50                 un cuaderno
+            Más de 50               una agenda
 
-Como oferta la tienda ofrece un regalo de acuerdo a la siguiente tabla:
+            Diseñe un programa que determine el importe a pagar y el regalo para un cliente de la tienda.
+            */
 
-Unidades adquiridas     Regalo
-1 a 25                  un lapicero
-26 a 50                 un cuaderno
-Más de 50               una agenda
+            let producto;
+            let importe;
+            let cantidad;
+            let precio;
 
-Diseñe un programa que determine el importe a pagar y el regalo para un cliente
-de la tienda.
+            producto = prompt("Ingrese Producto P1, P2 o P3: ");
+            cantidad = prompt("Ingrese cantidad: ");
 
+            function obtenerPrecioUnitario(params) {
+                let precioUnitario;
+                switch (params) {
+                    case "P1":
+                    precioUnitario = 15.0;
+                        break;            
+                    case "P2":
+                    precioUnitario = 17.5;
+                        break;
+                    case "P3":
+                    precioUnitario = 20.0;
+                        break;
+                    default:
+                    precioUnitario = 0
+                        break;
+                }
+                return precioUnitario;
+            }
 
+            function obtenerRegalo(params) {
+                if (params <= 25) {
+                    return "lapicero";
+                } else if (params <= 50) {
+                    return "cuaderno";
+                } else {
+                    return "agenda";
+                }
+            }
 
-
-    */
-
+            cantidad = parseInt(cantidad);
+            document.write("Producto comprado: " + producto);
+            precio = obtenerPrecioUnitario(producto);
+            document.write("<br/>Precio Unitario: " + precio);
+            document.write("<br/>Cantidad comprada: " + cantidad);
+            importe = cantidad * precio;
+            document.write("<br/>Importe a Pagar: " + importe);
+            document.write("<br/>Regalo obtenido: " + obtenerRegalo(cantidad));
         </script>
     </head>
     <body>
